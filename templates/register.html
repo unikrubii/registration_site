@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+
+<br><br><br>
+<h1 align="center">Register</h1>
+<form action="/info" method="post">
+	{% csrf_token %}
+	<div class="form-group">
+		<label for="username">Username</label>
+		<input type="text" class="form-control" name="username" placeholder="Username">
+	</div>
+	<br>
+	<div class="form-group">
+		<label for="password1">Password</label>
+		<input type="password" class="form-control" name="password1" placeholder="Password">
+	</div>
+	<br>
+	<div class="form-group">
+		<label for="password2">Retype Password</label>
+		<input type="password" class="form-control" name="password2" placeholder="Password">
+	</div>
+	<p2 style="color:red">{{ text }}</p2>
+	<br>
+	<br>
+	<input type="submit" class="btn btn-primary" value="submit">
+</form>
+
+<br>
+
+
+<!-- <form action="/handler" method="post">
+	{% csrf_token %}
+	<div class="form-group">
+		<label for="firstname">Your Name</label>
+		<input type="text" class="form-control" name="name" placeholder="name">
+	</div>
+	<br>
+	<a class="btn btn-primary">
+		<input type="submit" class="btn btn-primary" id="submit">
+	</a>
+</form> -->
+{% endblock %}

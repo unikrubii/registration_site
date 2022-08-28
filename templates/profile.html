@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<br>
+<form action="edit/" method="post">
+    {% csrf_token %}
+    <h1>{{ username }}'s Profile</h1>
+    <input type="hidden" name="username" value={{ username }}>
+
+    <p>Username: {{ username }}</p>
+    {% if firstname is not None and firstname != "" %}
+        <p>Firstname: {{ firstname }}</p>
+    {% endif %}
+
+    {% if lastname is not None and lastname != "" %}
+        <p>Lastname: {{ lastname }}</p>
+    {% endif %}
+
+    {% if tel_number is not None and tel_number != "" %}
+        <p>Telephone: {{ tel_number }}</p>
+    {% endif %}
+
+    {% if email is not None and email != "" %}
+        <p>gerder: {{ email }}</p>
+    {% endif %}
+
+    <input type="submit" value="edit" class="btn btn-primary">
+</form>
+ 
+{% endblock %}

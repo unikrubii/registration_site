@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<br>
+<h1>Login</h1>
+<form action="/profile/" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Enter Username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+        <p2 style="color: red;">{{ text }}</p>
+        <input type="submit" class="btn btn-primary" value="submit">
+    </div>
+</form>
+<br>
+<div>
+    <label>No Account? </label>
+    <a href={% url 'register' %}>Register</a>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+-i https://pypi.org/simple
+asgiref==3.5.2; python_version >= '3.7'
+django==4.1
+django-ninja==0.19.1
+django-phonenumber-field==6.3.0
+psycopg2==2.9.3
+pydantic==1.9.2; python_full_version >= '3.6.1'
+sqlparse==0.4.2; python_version >= '3.5'
+typing-extensions==4.3.0; python_version >= '3.7'

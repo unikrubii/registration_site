@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<br>
+
+<form action="submit/" method="post">
+    {% csrf_token %}
+    <br>
+    <p>
+        Username:
+        <input type="text" value={{ username }} name="username" readonly>
+    </p>
+    <br>
+    <p>
+        Firstname:
+        {% if firstname == None %}
+            <input type="text" value="" name="firstname">
+        {% else %}
+            <input type="text" value={{ firstname }} name="firstname">
+        {% endif %}
+    </p>
+    <br>
+    <p>
+        Lastname:
+        {% if lastname == None %}
+            <input type="text" value="" name="lastname">
+        {% else %}
+            <input type="text" value={{ lastname }} name="lastname">
+        {% endif %}
+    </p>
+    <br>
+    <p>
+        Email:
+        {% if email == None %}
+            <input type="text" value="" name="email">
+        {% else %}
+            <input type="text" value={{ email }} name="email">
+        {% endif %}
+    </p>
+    <br>
+    <p>
+        Telephone:
+        {% if tel_number == None %}
+            <input type="text" value="" name="tel_number">
+        {% else %}
+            <input type="text" value={{ tel_number }} name="tel_number">
+        {% endif %}
+    </p>
+    <br>
+    <input type="submit" class="btn btn-primary">
+</form>
+
+{% endblock %}
