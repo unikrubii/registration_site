@@ -9,7 +9,6 @@ A "website" (kind of). includes registration, login, and editing user's personal
 2. Your Environment.
 - Download Postgresql https://www.postgresql.org/download/ and install
 - If you don't want to install Postgresql in your computer, use `Dev Container` in vscode
-    - f
 - Install pipenv `pip install pipenv`
 - Run `pipenv install` or `pipenv sync`
 
